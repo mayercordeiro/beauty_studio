@@ -1,0 +1,182 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px;
+
+    position: relative;
+
+     .logo {
+        > a img {
+            max-width: 380px;
+        }
+    }
+
+    .logoScroll {
+        > a img {
+            max-width: 180px;
+        }
+    }
+
+    nav {
+        display: flex;
+        position: relative;
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 16px;
+        }
+
+        > div {
+            position: absolute;
+            right: 0;
+            top: -30px;
+
+            > a img:first-child {
+                margin-right: 16px;
+            }
+        }
+    }
+}
+
+.active_link {
+    position: relative;
+                
+    &::before {
+        content: url(../../../public/images/menu-cilio.svg);
+        position: absolute;
+        top: 8px;
+        left: -17px;
+        pointer-events: none;
+    }
+}
+
+.social {
+    display: flex;
+
+    a {
+        img {
+            margin-right: 0px !important;
+        }
+
+        &:first-child {margin-right: 16px }
+    }
+}
+
+.buttonMenu {
+    position: absolute;
+    right: 16px;
+
+    font-size: 48px;
+    cursor: pointer;
+
+    transition: 0.6s ease;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+// Menu Mobile
+
+#openMobile {
+    width: 100vw;
+}
+
+.overlay {
+    width: 0;
+    height: 100vh;
+    position: absolute;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.94);
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        cursor: pointer;
+
+        &:hover {
+            color: $secondary;
+            transition: 0.6s ease;
+        }
+    }
+
+    > div {
+        position: relative;
+        top: 15%;   
+        width: 100%;
+        text-align: center;
+
+        > ul {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .active_link_mobile {
+                color: #FFF;
+            }
+
+            li {
+                font-size: 1.8rem;
+                color: $primary;
+            }
+        }
+    }
+
+    .socialMobile {
+        margin-top: 32px;
+
+        a {
+            &:first-child {
+                margin-right: 32px ;
+            }
+        }
+    }
+  }
+
+  @include responsiveMax(1200px) {
+    .header_container {
+        justify-content: center !important;
+
+        > nav {
+            display: none !important;
+        }
+    }
+  }
+
+    @include responsiveMin(1201px) {
+        .header_container {
+            > .buttonMenu {
+                display: none;
+            }
+        }
+    }
+
+    @include responsiveMax(480px) {
+        .header_container {
+            > div {
+                > a img {
+                    max-width: 320px;
+                }
+            }
+        }
+
+        .buttonMenu {
+            font-size: 32px;
+            top: 18px;
+        }
+    }

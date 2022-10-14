@@ -1,0 +1,118 @@
+@import "../../styles/colors";
+@import "../../styles/shadows";
+@import "../../styles/mixins";
+
+.main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px;
+    height: 100vh;
+
+    position: relative;
+    z-index: 900;
+}
+
+.main_left {
+    max-width: 600px;
+    margin-top: 125px;
+
+    position: fixed;
+    top: 244px;
+
+    h2 {
+        font-size: 3rem;
+        line-height: 115%;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        line-height: 150%;
+    }
+}
+
+.main_buttons {
+    display: flex;
+
+    button {
+        color: #FFF;
+        background-color: $button_color;
+
+        border: 0;
+        border-radius: 24px;
+
+        padding: 8px 36px;
+        margin-top: 28px;
+
+        font-size: 1.125rem;
+
+        transition: .5s ease;
+
+        &:first-child {
+            margin-right: 28px;
+        }
+
+        &:hover {
+            transform: scale(108%);
+            color: $secondary;
+        }
+    }
+}
+
+.main_image_pinca {
+    position: fixed;
+    top: 26px;
+    left: -40px;
+}
+
+@include responsiveMax(1720px) {
+    .main_image_pinca {
+        left: -210px;
+    }
+}
+
+@include responsiveMax(1366px) {
+    .main_image_pinca {
+        left: -280px;
+    }
+}
+
+@include responsiveMax(648px) {
+    .main_left {
+        h2 {
+            font-size: 2.6rem;
+        }
+    
+        h1 {
+            font-size: 1.2rem;
+            line-height: 150%;
+        }
+    }
+
+    .main_buttons {
+        justify-content: center;
+    }
+}
+
+@include responsiveMax(480px) {
+    .main_image_pinca {
+        display: none;
+    }
+
+    .main_left {
+        margin-top: 85px;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    
+        h1 {
+            font-size: 1.2rem;
+            line-height: 150%;
+        }
+    }
+
+    .main_buttons {
+        justify-content: center;
+    }
+}
