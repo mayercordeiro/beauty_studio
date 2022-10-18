@@ -9,14 +9,13 @@ const Header = () => {
 
   useEffect(() => {
     const onScroll = (e) => {
+      console.log(e);
       setScrollTop(e.target.documentElement.scrollTop);
     };
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
-
-  console.log(scrollTop);
 
   // Abrir Menu Mobile
   const [mobileActive, setMobileActive] = useState();
@@ -30,7 +29,7 @@ const Header = () => {
       <div className={styles.header_container}>
         <div
           className={
-            scrollTop < 754 ? `${styles.logo}` : `${styles.logoScroll}`
+            scrollTop < 726 ? `${styles.logo}` : `${styles.logoScroll}`
           }
         >
           <Link href="/">

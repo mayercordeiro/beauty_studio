@@ -12,15 +12,17 @@
 
     position: relative;
 
-     .logo {
+    .logo {
         > a img {
             max-width: 380px;
+            transition: all 1s ease;
         }
     }
 
     .logoScroll {
         > a img {
             max-width: 180px;
+            transition: all 1s ease;
         }
     }
 
