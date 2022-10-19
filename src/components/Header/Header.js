@@ -8,14 +8,14 @@ import useScrollPosition from "../Hooks/useScrollPosition";
 const Header = () => {
   // Scroll Position
   const scrollPosition = useScrollPosition();
-  console.log(scrollPosition);
-
+  //
   // Abrir Menu Mobile
   const [mobileActive, setMobileActive] = useState();
 
   const handleMobile = () => {
     setMobileActive(!mobileActive);
   };
+  //
 
   return (
     <>

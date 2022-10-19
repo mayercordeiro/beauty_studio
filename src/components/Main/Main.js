@@ -1,26 +1,19 @@
-import { useState, useEffect } from "react";
 // CSS
 import styles from "./_Main.module.scss";
+// Hooks
+import useScrollPosition from "../Hooks/useScrollPosition";
 
 const Main = () => {
-  // Scroll Top
-  const [scrollTop, setScrollTop] = useState(false);
-
-  useEffect(() => {
-    const onScroll = (e) => {
-      setScrollTop(e.target.documentElement.scrollTop);
-    };
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollTop]);
+  // Scroll Position
+  const scrollPosition = useScrollPosition();
+  console.log(scrollPosition);
 
   return (
     <>
       <main className={styles.main}>
         <div
           className={
-            scrollTop < 235
+            scrollPosition < 120
               ? `${styles.main_left}`
               : `${styles.main_left} ${styles.main_off}`
           }
@@ -39,7 +32,7 @@ const Main = () => {
 
       <div
         className={
-          scrollTop < 400
+          scrollPosition < 120
             ? `${styles.main_image_pinca}`
             : `${styles.main_image_pinca} ${styles.pinca_off}`
         }
