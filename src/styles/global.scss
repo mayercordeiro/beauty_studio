@@ -46,6 +46,16 @@ header {
     z-index: 2500;
 }
 
+#header_bkg {
+    background-color: $bkg_main;
+    transition: all 0.4s ease;
+}
+
+#header_off {
+    background-color: unset;
+    transition: all 0.2s ease;
+}
+
 @include responsiveMax(960px) {
     body {
         &::after {

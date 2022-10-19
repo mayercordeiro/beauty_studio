@@ -2,20 +2,13 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 // CSS
 import styles from "./_Header.module.scss";
+// Hooks
+import useScrollPosition from "../Hooks/useScrollPosition";
 
 const Header = () => {
-  // Scroll Top
-  const [scrollTop, setScrollTop] = useState(false);
-
-  useEffect(() => {
-    const onScroll = (e) => {
-      console.log(e);
-      setScrollTop(e.target.documentElement.scrollTop);
-    };
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollTop]);
+  // Scroll Position
+  const scrollPosition = useScrollPosition();
+  console.log(scrollPosition);
 
   // Abrir Menu Mobile
   const [mobileActive, setMobileActive] = useState();
@@ -29,7 +22,7 @@ const Header = () => {
       <div className={styles.header_container}>
         <div
           className={
-            scrollTop < 726 ? `${styles.logo}` : `${styles.logoScroll}`
+            scrollPosition < 726 ? `${styles.logo}` : `${styles.logoScroll}`
           }
         >
           <Link href="/">
@@ -44,7 +37,7 @@ const Header = () => {
 
         <nav>
           <ul>
-            <li className={styles.active_link}>
+            <li>
               <Link href="/">
                 <a>HOME</a>
               </Link>

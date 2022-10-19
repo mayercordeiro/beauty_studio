@@ -48,18 +48,6 @@
     }
 }
 
-.active_link {
-    position: relative;
-                
-    &::before {
-        content: url(../../../public/images/menu-cilio.svg);
-        position: absolute;
-        top: 8px;
-        left: -17px;
-        pointer-events: none;
-    }
-}
-
 .social {
     display: flex;
 
@@ -170,15 +158,15 @@
 
     @include responsiveMax(480px) {
         .header_container {
-            > div {
+            .logo {
                 > a img {
                     max-width: 320px;
                 }
             }
-        }
-
-        .buttonMenu {
-            font-size: 32px;
-            top: 18px;
+        
+            .buttonMenu {
+                font-size: 32px;
+                top: 18px;
+            }
         }
     }
