@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 // CSS
 import styles from "./_Header.module.scss";
 // Hooks
@@ -83,7 +83,7 @@ const Header = () => {
                 />
               </a>
             </Link>
-            <Link href="/">
+            <Link href="https://www.instagram.com/pamela.raamos/">
               <a target="_blank">
                 <img src="/images/icon-fb.svg" alt="Conheça o nosso facebook" />
               </a>

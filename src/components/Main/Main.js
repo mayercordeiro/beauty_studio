@@ -1,9 +1,9 @@
+import Link from "next/link";
 // CSS
 import styles from "./_Main.module.scss";
 // Hooks
 import useScrollPosition from "../Hooks/useScrollPosition";
 // Components
-import Icons from "./Icons";
 
 const Main = () => {
   // Scroll Position
@@ -26,12 +26,12 @@ const Main = () => {
             Seus cílios perfeitos com a melhor técnica de aplicação.
           </h1>
           <div className={styles.main_buttons}>
-            <button>Agendar</button>
+            <Link href="/quem-somos">
+              <button>Agendar</button>
+            </Link>
             <button>Veja Mais</button>
           </div>
         </div>
-
-        <Icons />
 
         {/* <div className={styles.scrollImg}>
           <img src="/images/mouse-scroll.svg" alt="" srcset="" />

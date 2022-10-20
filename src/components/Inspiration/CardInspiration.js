@@ -10,6 +10,11 @@ const Card = styled.div`
 
   background-color: ${(props) => (props.background_dark ? "#3F3F3F" : "")};
   box-shadow: ${(props) => (props.box_shadow ? "0 0 0px 16px #3f3f3f" : "")};
+
+  @media screen and (max-width: 420px) {
+    width: 320px;
+    height: 490px;
+  }
 `;
 
 const Front = styled.div`
@@ -58,6 +63,7 @@ const Back = styled.div`
   width: 100%;
   height: 100%;
   opacity: 0;
+  filter: blur(20px);
 
   &:hover {
     animation-name: reveal;
@@ -66,11 +72,7 @@ const Back = styled.div`
   }
 
   @keyframes reveal {
-    0% {
-      opacity: 0;
-      filter: blur(20px);
-    }
-    100% {
+    to {
       opacity: 1;
       filter: blur(0px);
     }

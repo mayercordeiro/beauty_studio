@@ -100,16 +100,13 @@
     }
 }
 
-.instagram {
+.instagram a {
     padding: 14px 10px 10px 10px;
     background-color: #FFF;
     border: 1px solid #000;
     margin: 10px 0;
     font-size: 18px;
     line-height: 1rem;
-    cursor: pointer;
-
-    transition: all 1s ease;
 
     &:hover {
         background-color: #3F3F3F;

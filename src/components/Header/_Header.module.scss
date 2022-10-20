@@ -52,11 +52,15 @@
     display: flex;
 
     a {
+        transition: all .5s ease;
+
         img {
             margin-right: 0px !important;
         }
 
         &:first-child {margin-right: 16px }
+
+        &:hover {transform: translateY(-4px); transition: all .5s ease;}
     }
 }
 

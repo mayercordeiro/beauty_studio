@@ -1,8 +1,8 @@
 // CSS
 import styles from "./_Inspiration.module.scss";
-import styled from "styled-components";
 // Components
 import { CardInspiration, CardInspirationDark } from "./CardInspiration";
+import InstagramLink from "./InstagramLink";
 
 const Inspiration = () => {
   return (
@@ -43,14 +43,9 @@ const Inspiration = () => {
               img="./images/inspiration01.jpg"
             />
           </div>
-        </div>
 
-        <a
-          className={styles.instagram}
-          href="https://www.instagram.com/pamela.raamos/"
-        >
-          CONHEÇA NOSSO INSTAGRAM
-        </a>
+          <InstagramLink />
+        </div>
       </div>
     </section>
   );
