@@ -2,6 +2,8 @@
 import styles from "./_Main.module.scss";
 // Hooks
 import useScrollPosition from "../Hooks/useScrollPosition";
+// Components
+import Icons from "./Icons";
 
 const Main = () => {
   // Scroll Position
@@ -28,6 +30,12 @@ const Main = () => {
             <button>Veja Mais</button>
           </div>
         </div>
+
+        <Icons />
+
+        {/* <div className={styles.scrollImg}>
+          <img src="/images/mouse-scroll.svg" alt="" srcset="" />
+        </div> */}
       </main>
 
       <div
