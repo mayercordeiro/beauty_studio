@@ -48,7 +48,6 @@ const Inspiration = () => {
         <a
           className={styles.instagram}
           href="https://www.instagram.com/pamela.raamos/"
-          target="_blank"
         >
           CONHEÇA NOSSO INSTAGRAM
         </a>
