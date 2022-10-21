@@ -34,6 +34,29 @@
             display: flex;
             list-style: none;
             gap: 16px;
+            position: relative;
+
+            li a {
+                display: inline-block;
+                position: relative;
+                transition: all 0.3s ease-in-out;
+
+                &::after {
+                    content: '';
+                    background: #c59d5f;
+                    display: block;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover::after {
+                    width:100%;
+                }
+            }
         }
 
         > div {

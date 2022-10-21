@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <header id={scrollPosition > 800 ? "header_bkg" : "header_off"}>
+      <header id={scrollPosition > 500 ? "header_bkg" : "header_off"}>
         <Header />
       </header>
       <Component {...pageProps} />

@@ -8,7 +8,6 @@ import useScrollPosition from "../Hooks/useScrollPosition";
 const Header = () => {
   // Scroll Position
   const scrollPosition = useScrollPosition();
-  //
   // Abrir Menu Mobile
   const [mobileActive, setMobileActive] = useState();
 
@@ -22,7 +21,7 @@ const Header = () => {
       <div className={styles.header_container}>
         <div
           className={
-            scrollPosition < 726 ? `${styles.logo}` : `${styles.logoScroll}`
+            scrollPosition < 500 ? `${styles.logo}` : `${styles.logoScroll}`
           }
         >
           <Link href="/">
