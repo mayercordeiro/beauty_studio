@@ -16,7 +16,7 @@ const Main = () => {
       <main className={styles.main}>
         <div
           className={
-            scrollPosition < 120
+            scrollPosition < 200
               ? `${styles.main_left}`
               : `${styles.main_left} ${styles.main_off}`
           }
@@ -30,7 +30,7 @@ const Main = () => {
             <Link href="/quem-somos">
               <button>Agendar</button>
             </Link>
-            <button>Veja Mais</button>
+            <button>Serviços</button>
           </div>
         </div>
 

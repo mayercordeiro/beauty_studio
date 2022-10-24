@@ -9,10 +9,11 @@ const Icon = styled.img`
   left: ${(props) => props.left};
   z-index: 2400;
   animation-name: ${(props) => props.animation};
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-direction: unset;
+  animation-duration: 1s, 1s;
+  animation-timing-function: ease-in-out, ease;
+  animation-fill-mode: forwards, forwards;
+  animation-direction: normal, alternate;
+  animation-iteration-count: 1, infinite;
   animation-play-state: ${(props) => props.play};
 
   @keyframes ciliosOnScroll {
@@ -22,11 +23,8 @@ const Icon = styled.img`
   }
 
   @keyframes cilios {
-    from {
-      transform: translateY(20px);
-    }
     to {
-      transform: translateY(40px);
+      transform: scale(1.1);
     }
   }
 

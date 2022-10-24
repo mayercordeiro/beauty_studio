@@ -1,10 +1,10 @@
-import { useState } from "react";
 // CSS
 import styled from "styled-components";
 // Hooks
 import useScrollPosition from "../../Hooks/useScrollPosition";
 // Components
 import Icons from "./Icons";
+import Cilios from "./Cilios";
 
 const IconsContainer = styled.div`
   position: absolute;
@@ -55,11 +55,13 @@ const IconsAnimated = () => {
 
   return (
     <IconsContainer>
-      <Icons
+      <Cilios />
+
+      {/* <Icons
         src="./images/a-cilios-c.svg"
         top={"20px"}
-        animation={"ciliosOnScroll"}
-        play={scrollOn ? "play" : "paused"}
+        animation={"ciliosOnScroll, cilios"}
+        play={`${scrollOn ? "" : "paused"}, running`}
       />
       <Icons
         src="./images/a-sobrancelha-c.svg"
@@ -74,7 +76,7 @@ const IconsAnimated = () => {
         right={"-50px"}
         animation={"maquiagemOnScroll"}
         play={scrollOn ? "play" : "paused"}
-      />
+      /> */}
       <Texts playTexts={scrollOn ? "play" : "paused"}>
         <p>Cílios</p>
         <p>Sobrancelhas</p>

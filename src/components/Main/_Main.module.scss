@@ -39,35 +39,61 @@
     display: flex;
 
     button {
+        position: relative;
         color: #FFF;
         background-color: $button_color;
 
-        border: 0;
-        border-radius: 24px;
+        border: 1px solid $button_color;
+        border-radius: 16px;
 
         padding: 8px 36px;
         margin-top: 28px;
 
         font-size: 1.125rem;
 
-        transition: .5s ease;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border: 1px solid $button_color;
+            background: transparent;
+            color: $primary;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            top: -180px;
+            left: 0;
+            width: 30px;
+            height: 100%;
+            background-color: #fff;
+            animation: btn 3s ease-in-out infinite;
+        }
+
+        @keyframes btn {
+            0% { transform: scale(0) rotate(45deg); opacity: 0; }
+            80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+            81% { transform: scale(4) rotate(45deg); opacity: 1; }
+            100% { transform: scale(50) rotate(45deg); opacity: 0; }
+        }
 
         &:first-child {
             margin-right: 28px;
-        }
-
-        &:hover {
-            transform: scale(108%);
-            color: $secondary;
         }
     }
 }
 
 .main_image_pinca {
     position: fixed;
-    top: -16px;
+    top: 4px;
     left: -40px;
     transition: 0.5s ease;
+
+    > img {
+        max-width: 400px;
+    }
 }
 
 .pinca_off {
