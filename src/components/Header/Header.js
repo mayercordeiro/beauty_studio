@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 // CSS
 import styles from "./_Header.module.scss";
@@ -14,14 +15,15 @@ const Header = () => {
   const handleMobile = () => {
     setMobileActive(!mobileActive);
   };
-  //
+  // Next Router (Active Link)
+  const router = useRouter();
 
   return (
     <>
       <div className={styles.header_container}>
         <div
           className={
-            scrollPosition < 500 ? `${styles.logo}` : `${styles.logoScroll}`
+            scrollPosition < 250 ? `${styles.logo}` : `${styles.logoScroll}`
           }
         >
           <Link href="/">
@@ -106,12 +108,24 @@ const Header = () => {
 
         <div>
           <ul>
-            <li className={styles.active_link_mobile} onClick={handleMobile}>
+            <li
+              className={
+                router.pathname === "/" ? `${styles.active_link_mobile}` : ""
+              }
+              onClick={handleMobile}
+            >
               <Link href="/">
                 <a>HOME</a>
               </Link>
             </li>
-            <li onClick={handleMobile}>
+            <li
+              className={
+                router.pathname === "/quem-somos"
+                  ? `${styles.active_link_mobile}`
+                  : ""
+              }
+              onClick={handleMobile}
+            >
               <Link href="/quem-somos">
                 <a>QUEM SOMOS</a>
               </Link>

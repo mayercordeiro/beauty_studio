@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 // CSS
 import "../styles/global.scss";
 // Components
@@ -11,7 +12,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <header id={scrollPosition > 500 ? "header_bkg" : "header_off"}>
+      <header id={scrollPosition > 250 ? "header_bkg" : "header_off"}>
         <Header />
       </header>
       <Component {...pageProps} />

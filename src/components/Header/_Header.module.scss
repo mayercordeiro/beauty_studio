@@ -122,8 +122,8 @@
     .closebtn {
         position: absolute;
         top: 20px;
-        right: 45px;
-        font-size: 60px;
+        right: 30px;
+        font-size: 48px;
         cursor: pointer;
 
         &:hover {
@@ -141,15 +141,19 @@
         > ul {
             display: flex;
             flex-direction: column;
-            gap: 32px;
+            gap: 18px;
 
             .active_link_mobile {
                 color: #FFF;
             }
 
             li {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 color: $primary;
+
+                @media screen and (max-height: 650px) {
+                    font-size: 1.2rem;
+                }
             }
         }
     }
@@ -183,7 +187,7 @@
         }
     }
 
-    @include responsiveMax(480px) {
+    @include responsiveMax(1200px) {
         .header_container {
             .logo {
                 > a img {

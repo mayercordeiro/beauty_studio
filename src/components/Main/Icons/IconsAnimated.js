@@ -12,6 +12,14 @@ const IconsContainer = styled.div`
   right: 0;
   width: 500px;
   height: 500px;
+
+  @media screen and (max-width: 1380px) {
+    right: 50px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const Texts = styled.div`
@@ -30,7 +38,7 @@ const Texts = styled.div`
   }
 
   animation: textsOnScroll 1.5s ease-in forwards;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
   animation-play-state: ${(props) => props.playTexts};
 
   @keyframes textsOnScroll {
@@ -44,7 +52,6 @@ const IconsAnimated = () => {
   // Scroll Position
   const scrollPosition = useScrollPosition();
   const scrollOn = scrollPosition > 0;
-  console.log(scrollOn);
 
   return (
     <IconsContainer>

@@ -35,10 +35,6 @@ const Main = () => {
         </div>
 
         <IconsAnimated />
-
-        {/* <div className={styles.scrollImg}>
-          <img src="/images/mouse-scroll.svg" alt="" srcset="" />
-        </div> */}
       </main>
 
       <div
