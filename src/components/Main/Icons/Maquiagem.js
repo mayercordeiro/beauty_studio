@@ -3,10 +3,11 @@ import useScrollPosition from "../../Hooks/useScrollPosition";
 // CSS
 import styled from "styled-components";
 
-const DivCilios = styled.div`
+const DivMaquiagem = styled.div`
   position: absolute;
   z-index: 2;
-  top: 20px;
+  top: -10px;
+  right: -50px;
   transition: all 0.4s ease-in-out;
 
   img {
@@ -16,21 +17,21 @@ const DivCilios = styled.div`
     transition: all 1s ease;
 
     &:hover {
-      transform: scale(1.2) rotate(10deg);
+      transform: scale(1.2) rotate(-10deg);
     }
   }
 
   animation: ${(props) => props.animation};
 
-  @keyframes ciliosAni {
+  @keyframes maquiagemAni {
     to {
-      transform: translateY(540px) translateX(-420px);
+      transform: translateY(570px) translateX(-391px);
     }
   }
 
-  @keyframes ciliosAni_ {
+  @keyframes maquiagemAni_ {
     from {
-      transform: translateY(540px) translateX(-420px);
+      transform: translateY(570px) translateX(-391px);
     }
     to {
       transform: translateY(0px) translateX(0px);
@@ -38,22 +39,22 @@ const DivCilios = styled.div`
   }
 `;
 
-const Cilios = (props) => {
+const Maquiagem = (props) => {
   // Scroll Position
   const scrollPosition = useScrollPosition();
   const scrollOn = scrollPosition > 0;
 
   return (
-    <DivCilios
+    <DivMaquiagem
       animation={`${
         scrollOn
-          ? "ciliosAni 1s ease-in-out forwards"
-          : "ciliosAni_ 1s ease-in-out"
+          ? "maquiagemAni 1s ease-in-out forwards"
+          : "maquiagemAni_ 1s ease-in-out"
       }`}
     >
-      <img src="./images/a-cilios-c.svg" alt="cilios" />
-    </DivCilios>
+      <img src="./images/a-maquiagem-c.svg" alt="cilios" />
+    </DivMaquiagem>
   );
 };
 
-export default Cilios;
+export default Maquiagem;

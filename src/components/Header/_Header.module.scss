@@ -35,6 +35,7 @@
             list-style: none;
             gap: 18px;
             position: relative;
+            margin-top: 8px;
 
             li a {
                 display: inline-block;
@@ -66,7 +67,7 @@
         > div {
             position: absolute;
             right: 0;
-            top: -25px;
+            top: -20px;
 
             > a img:first-child {
                 margin-right: 16px;

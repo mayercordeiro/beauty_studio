@@ -5,6 +5,7 @@ import useScrollPosition from "../../Hooks/useScrollPosition";
 // Components
 import Icons from "./Icons";
 import Cilios from "./Cilios";
+import Maquiagem from "./Maquiagem";
 
 const IconsContainer = styled.div`
   position: absolute;
@@ -27,7 +28,7 @@ const Texts = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 800px;
-  top: 680px;
+  top: 718px;
   left: -534px;
   z-index: 2400;
   opacity: 0;
@@ -56,6 +57,7 @@ const IconsAnimated = () => {
   return (
     <IconsContainer>
       <Cilios />
+      <Maquiagem />
 
       {/* <Icons
         src="./images/a-cilios-c.svg"

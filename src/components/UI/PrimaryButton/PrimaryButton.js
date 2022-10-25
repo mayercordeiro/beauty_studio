@@ -37,6 +37,7 @@ const Button = styled.div`
       background-color: ${(props) => props.bkgAnimation};
       animation: btn 3s ease-in-out infinite;
       border: ${(props) => props.border};
+      border-radius: 16px;
     }
 
     @keyframes btn {
