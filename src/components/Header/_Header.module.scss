@@ -125,8 +125,8 @@
 
     .closebtn {
         position: absolute;
-        top: 20px;
-        right: 30px;
+        top: 10px;
+        right: 16px;
         font-size: 48px;
         cursor: pointer;
 
@@ -146,6 +146,7 @@
             display: flex;
             flex-direction: column;
             gap: 18px;
+            list-style: none;
 
             .active_link_mobile {
                 color: #FFF;

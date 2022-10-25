@@ -34,8 +34,9 @@ const Button = styled.div`
       left: 0;
       width: 30px;
       height: 100%;
-      background-color: #505050;
+      background-color: ${(props) => props.bkgAnimation};
       animation: btn 3s ease-in-out infinite;
+      border: ${(props) => props.border};
     }
 
     @keyframes btn {
@@ -71,6 +72,7 @@ const PrimaryButton = (props) => {
       border={props.border}
       bkg={props.bkg}
       bkgHover={props.bkgHover}
+      bkgAnimation={props.bkgAnimation}
     >
       <Link href={props.href}>
         <a>{props.text}</a>

@@ -36,6 +36,7 @@ const Main = () => {
               bkg="#3F3F3F"
               bkgHover="transparent"
               href="/quem-somos"
+              bkgAnimation="#FFF"
             />
             <PrimaryButton
               text="Serviços"
@@ -45,6 +46,7 @@ const Main = () => {
               bkg="#3F3F3F"
               bkgHover="transparent"
               href="/servicos"
+              bkgAnimation="#FFF"
             />
           </div>
         </div>

@@ -14,6 +14,9 @@ const Experts = () => {
 
         <div className={styles.expertN1}>
           <div className={styles.description}>
+            <div className={styles.img_mobile}>
+              <img src="./images/expertn1-mobile.jpg" alt="Pâmela Ramos" />
+            </div>
             <h4>Pâmela Ramos</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
@@ -33,10 +36,11 @@ const Experts = () => {
               bkg="#FFF"
               bkgHover="transparent"
               href="/quem-somos"
+              bkgAnimation="#505050"
             />
           </div>
           <div className={styles.img_expert}>
-            <img src="./images/expertn1.png" alt="" />
+            <img src="./images/expertn1.png" alt="Pâmela Ramos" />
           </div>
         </div>
       </div>

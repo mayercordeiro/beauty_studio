@@ -54,7 +54,7 @@
                 padding-left: 32px;
 
                 @include responsiveMax(648px) {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
 
                 &::before {
@@ -75,6 +75,10 @@
                     position: absolute;
                     top: 45%;
                     left: 138px;
+
+                    @include responsiveMax(648px) {
+                        left: 124px;
+                    }
                 }
             }
         }

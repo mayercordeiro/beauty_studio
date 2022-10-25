@@ -29,6 +29,12 @@ const DivCilios = styled.div`
       transform: translateY(0px) translateX(0px);
     }
   }
+
+  @keyframes move {
+    to {
+      transform: scale(1.5);
+    }
+  }
 `;
 
 const Cilios = (props) => {
@@ -40,8 +46,8 @@ const Cilios = (props) => {
     <DivCilios
       animation={`${
         scrollOn
-          ? "ciliosAni 1.2s ease-in-out 1 forwards"
-          : "ciliosAni_ 0.6s ease-in-out 1"
+          ? "ciliosAni 1s ease-in-out forwards"
+          : "ciliosAni_ 1s ease-in-out"
       }`}
     >
       <img src="./images/a-cilios-c.svg" alt="cilios" />

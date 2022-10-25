@@ -135,10 +135,6 @@
             line-height: 150%;
         }
     }
-
-    .main_buttons {
-        justify-content: center;
-    }
 }
 
 @include responsiveMax(480px) {

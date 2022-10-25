@@ -2,7 +2,7 @@
 import styles from "./_Inspiration.module.scss";
 // Components
 import CardInspiration from "../UI/CardInspiration/CardInspiration";
-import InstagramLink from "./InstagramLink";
+import InstagramButton from "../UI/InstagramButton/InstagramButton";
 
 const Inspiration = () => {
   return (
@@ -51,7 +51,7 @@ const Inspiration = () => {
             />
           </div>
 
-          <InstagramLink />
+          <InstagramButton />
         </div>
       </div>
     </section>
