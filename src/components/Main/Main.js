@@ -5,6 +5,7 @@ import styles from "./_Main.module.scss";
 import useScrollPosition from "../Hooks/useScrollPosition";
 // Components
 import IconsAnimated from "./Icons/IconsAnimated";
+import PrimaryButton from "../UI/PrimaryButton/PrimaryButton";
 
 const Main = () => {
   // Scroll Position
@@ -27,10 +28,24 @@ const Main = () => {
             Seus cílios perfeitos com a melhor técnica de aplicação.
           </h1>
           <div className={styles.main_buttons}>
-            <Link href="/quem-somos">
-              <button>Agendar</button>
-            </Link>
-            <button>Serviços</button>
+            <PrimaryButton
+              text="Agendar"
+              color="#FFF"
+              colorHover="#3F3F3F"
+              border="1px solid #3F3F3F"
+              bkg="#3F3F3F"
+              bkgHover="transparent"
+              href="/quem-somos"
+            />
+            <PrimaryButton
+              text="Serviços"
+              color="#FFF"
+              colorHover="#3F3F3F"
+              border="1px solid #3F3F3F"
+              bkg="#3F3F3F"
+              bkgHover="transparent"
+              href="/servicos"
+            />
           </div>
         </div>
 

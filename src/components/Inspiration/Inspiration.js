@@ -1,7 +1,7 @@
 // CSS
 import styles from "./_Inspiration.module.scss";
 // Components
-import { CardInspiration, CardInspirationDark } from "./CardInspiration";
+import CardInspiration from "../UI/CardInspiration/CardInspiration";
 import InstagramLink from "./InstagramLink";
 
 const Inspiration = () => {
@@ -16,6 +16,7 @@ const Inspiration = () => {
         <div className={styles.destaques}>
           <div className={styles.destaques_container}>
             <CardInspiration
+              url="./images/inspiration01.jpg"
               titulo="Extensão"
               subtitulo="Cílios"
               texto="É um procedimento estético que visa a aumentar o volume de fios, sem a
@@ -25,7 +26,12 @@ const Inspiration = () => {
               img="./images/inspiration01.jpg"
             />
 
-            <CardInspirationDark
+            <CardInspiration
+              bkg="#3F3F3F"
+              shadow="0 0 0px 16px #3F3F3F"
+              h1Color="#FFF"
+              pColor="#FFF"
+              url="./images/inspiration01.jpg"
               titulo="Lash Lift"
               subtitulo="Cílios"
               texto="O Lash Lifting, também conhecido como lifting de cílios, é uma
@@ -37,6 +43,7 @@ const Inspiration = () => {
             />
 
             <CardInspiration
+              url="./images/inspiration01.jpg"
               titulo="Brow Lamination"
               subtitulo="Sobrancelhas"
               texto="Essa técnica usa a sobrancelha natural da pessoa e com a ajuda de produtos químicos, a deixa com aspecto de volumosa e com os pelos mais alinhados."

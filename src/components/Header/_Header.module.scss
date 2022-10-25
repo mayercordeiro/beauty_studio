@@ -41,6 +41,10 @@
                 position: relative;
                 transition: all 0.3s ease-in-out;
 
+                &:hover {
+                    color: #c59d5f;
+                }
+
                 &::after {
                     content: '';
                     background: #c59d5f;

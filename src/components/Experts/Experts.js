@@ -25,7 +25,15 @@ const Experts = () => {
               eget nisl ipsum. Morbi ipsum justo, euismod vitae eros non,
               ultrices tincidunt turpis.
             </p>
-            <PrimaryButton text="Quem Somos" />
+            <PrimaryButton
+              text="Quem Somos"
+              color="#505050"
+              colorHover="#FFF"
+              border="1px solid #FFF"
+              bkg="#FFF"
+              bkgHover="transparent"
+              href="/quem-somos"
+            />
           </div>
           <div className={styles.img_expert}>
             <img src="./images/expertn1.png" alt="" />
