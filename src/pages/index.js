@@ -5,15 +5,15 @@ import Inspiration from "../components/Inspiration/Inspiration";
 import Experts from "../components/Experts/Experts";
 import Services from "../components/Services/Services";
 
-export async function getStaticProps() {
-  const dados = await fetch("http://localhost:1337/api/services");
-  const dadosJson = await dados.json();
-  const services = await dadosJson.data;
+// export async function getStaticProps() {
+//   const dados = await fetch("http://localhost:1337/api/services");
+//   const dadosJson = await dados.json();
+//   const services = await dadosJson.data;
 
-  return {
-    props: { services },
-  };
-}
+//   return {
+//     props: { services },
+//   };
+// }
 
 export default function Home({ services }) {
   return (
