@@ -2,15 +2,18 @@
 import styles from "./_Experts.module.scss";
 // Components
 import PrimaryButton from "../UI/PrimaryButton/PrimaryButton";
+import Titles from "../UI/Titles/Titles";
 
 const Experts = () => {
   return (
     <section className={styles.experts}>
       <div className={styles.experts_container}>
-        <div className={styles.title}>
-          <h3>PROFISSIONALISMO</h3>
-          <h2>Nossos Experts</h2>
-        </div>
+        <Titles
+          h2="Nossos Experts"
+          h3="PROFISSIONALISMO"
+          color="#FFF"
+          left="200px"
+        />
 
         <div className={styles.expertN1}>
           <div className={styles.description}>

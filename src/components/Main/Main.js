@@ -10,7 +10,6 @@ import PrimaryButton from "../UI/PrimaryButton/PrimaryButton";
 const Main = () => {
   // Scroll Position
   const scrollPosition = useScrollPosition();
-  console.log(scrollPosition);
 
   return (
     <>

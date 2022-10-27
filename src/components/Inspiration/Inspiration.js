@@ -3,15 +3,18 @@ import styles from "./_Inspiration.module.scss";
 // Components
 import CardInspiration from "../UI/CardInspiration/CardInspiration";
 import InstagramButton from "../UI/InstagramButton/InstagramButton";
+import Titles from "../UI/Titles/Titles";
 
 const Inspiration = () => {
   return (
     <section className={styles.inspiration}>
       <div className={styles.inspiration_container}>
-        <div className={styles.inspiration_title}>
-          <h3>INSPIRAÇÃO</h3>
-          <h2>Últimas Tendências</h2>
-        </div>
+        <Titles
+          h2="Últimas Tendências"
+          h3="INSPIRAÇÃO"
+          color="#505050"
+          left="138px"
+        />
 
         <div className={styles.destaques}>
           <div className={styles.destaques_container}>

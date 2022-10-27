@@ -25,63 +25,10 @@
 
     .inspiration_container {
         max-width: 1280px;
-        margin: 0 auto;
+        margin: 280px auto 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        .inspiration_title{
-            margin-top: 220px;
-            z-index: 2;
-
-            h2 {
-                font-size: 48px;
-                margin-top: -4px;
-
-                @include responsiveMax(648px) {
-                    font-size: 2.6rem;
-                }
-
-                @include responsiveMax(426px) {
-                    line-height: 115%;
-                    margin-top: 10px;
-                }
-            }
-
-            h3 {
-                position: relative;
-                font-size: 16px;
-                padding-left: 32px;
-
-                @include responsiveMax(648px) {
-                    font-size: 14px;
-                }
-
-                &::before {
-                    content: "";
-                    width: 25px;
-                    height: 1px;
-                    background-color: $primary;
-                    position: absolute;
-                    top: 45%;
-                    left: 0;
-                }
-
-                &::after {
-                    content: "";
-                    width: 25px;
-                    height: 1px;
-                    background-color: $primary;
-                    position: absolute;
-                    top: 45%;
-                    left: 138px;
-
-                    @include responsiveMax(648px) {
-                        left: 124px;
-                    }
-                }
-            }
-        }
 
         .destaques {
             z-index: 2;
