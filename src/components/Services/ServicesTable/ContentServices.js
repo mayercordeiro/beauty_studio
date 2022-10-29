@@ -1,7 +1,5 @@
 // CSS
 import styled from "styled-components";
-// Components
-import PrimaryButton from "../../../UI/PrimaryButton/PrimaryButton";
 
 const Container = styled.div`
   max-width: 1280px;
@@ -9,7 +7,7 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 0 16px;
 `;
-
+//
 const Items = styled.div`
   width: 350px;
   height: 500px;
@@ -74,7 +72,7 @@ const Description = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
+//
 const ItemImg = styled.img`
   height: 300px;
   border: 1px solid #c59d5f;
@@ -102,39 +100,11 @@ const Infos = styled.div`
   }
 `;
 
-const ContentServices = () => {
+const ContentServices = (props) => {
   return (
     <Container>
       <Items>
         <ul>
-          <div>
-            <li>Item 01</li>
-            <span>R$ 50,00</span>
-          </div>
-          <div>
-            <li>Item 01</li>
-            <span>R$ 50,00</span>
-          </div>
-          <div>
-            <li>Item 01</li>
-            <span>R$ 50,00</span>
-          </div>
-          <div>
-            <li>Item 01</li>
-            <span>R$ 50,00</span>
-          </div>
-          <div>
-            <li>Item 01</li>
-            <span>R$ 50,00</span>
-          </div>
-          <div>
-            <li>Item 01</li>
-            <span>R$ 50,00</span>
-          </div>
-          <div>
-            <li>Item 01</li>
-            <span>R$ 50,00</span>
-          </div>
           <div>
             <li>Item 01</li>
             <span>R$ 50,00</span>
@@ -158,16 +128,6 @@ const ContentServices = () => {
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo.
           </p>
-          <PrimaryButton
-            text="Agendar"
-            color="#FFF"
-            colorHover="#3F3F3F"
-            border="1px solid #3F3F3F"
-            bkg="#3F3F3F"
-            bkgHover="transparent"
-            href="/quem-somos"
-            bkgAnimation="#FFF"
-          />
         </Infos>
       </Description>
     </Container>

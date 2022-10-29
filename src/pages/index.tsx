@@ -1,21 +1,16 @@
 import Head from "next/head";
+import { GetStaticProps } from "next";
+import { ServicesProps } from "../types/api";
+import client from "../graphql/client";
 // Components
 import Main from "../components/Main/Main";
 import Inspiration from "../components/Inspiration/Inspiration";
 import Experts from "../components/Experts/Experts";
 import Services from "../components/Services/Services";
+// Queries
+import GET_SERVICES from "../graphql/queries/getServices";
 
-// export async function getStaticProps() {
-//   const dados = await fetch("http://localhost:1337/api/services");
-//   const dadosJson = await dados.json();
-//   const services = await dadosJson.data;
-
-//   return {
-//     props: { services },
-//   };
-// }
-
-export default function Home({ services }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -29,11 +24,19 @@ export default function Home({ services }) {
       <Inspiration />
       <Experts />
       <Services />
-      {/* <div>
-        {services.map((service) => (
-          <h1 key={service.id}>{service.attributes.service_name}</h1>
-        ))}
-      </div> */}
     </>
   );
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const services = await client.request(GET_SERVICES);
+  const data = services.items.data;
+
+  console.log(data)
+
+  return {
+    props: {
+      ...services
+    }
+  }
 }

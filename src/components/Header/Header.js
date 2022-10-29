@@ -102,7 +102,7 @@ const Header = () => {
         id={mobileActive ? `${styles.openMobile}` : ""}
         className={styles.overlay}
       >
-        <a class={styles.closebtn} onClick={handleMobile}>
+        <a className={styles.closebtn} onClick={handleMobile}>
           &times;
         </a>
 

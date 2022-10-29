@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 // CSS
 import "../styles/global.scss";
 // Components

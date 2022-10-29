@@ -2,7 +2,7 @@ import { useState } from "react";
 // CSS
 import styled from "styled-components";
 // Components
-import ContentServices from "./Tables/ContentServices";
+import ContentServices from "./ContentServices";
 
 const Services = styled.div`
   width: 100%;
