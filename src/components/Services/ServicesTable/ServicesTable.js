@@ -2,7 +2,7 @@ import { useState } from "react";
 // CSS
 import styled from "styled-components";
 // Components
-import ContentServices from "./ContentServices";
+import CiliosContent from "./Content/CiliosContent";
 
 const Services = styled.div`
   width: 100%;
@@ -70,9 +70,11 @@ const ServicesTable = () => {
       </Services>
 
       <Content>
-        {activeTab === "cilios" && <ContentServices />}
-        {activeTab === "sobrancelhas" && <ContentServices />}
-        {activeTab === "maquiagem" && <ContentServices />}
+        {activeTab === "cilios" && <CiliosContent service="Cilios" />}
+        {activeTab === "sobrancelhas" && (
+          <CiliosContent service="Sobrancelhas" />
+        )}
+        {activeTab === "maquiagem" && <h1>###</h1>}
       </Content>
     </>
   );

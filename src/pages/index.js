@@ -1,13 +1,12 @@
 import Head from "next/head";
-import { GetStaticProps } from "next";
-import { ServicesProps } from "../types/api";
-import client from "../graphql/client";
 // Components
 import Main from "../components/Main/Main";
 import Inspiration from "../components/Inspiration/Inspiration";
 import Experts from "../components/Experts/Experts";
 import Services from "../components/Services/Services";
+import { ServicesContextProvider } from "../contexts/ServicesContext";
 // Queries
+import client from "../graphql/client";
 import GET_SERVICES from "../graphql/queries/getServices";
 
 export default function Home() {
@@ -23,20 +22,9 @@ export default function Home() {
       <Main />
       <Inspiration />
       <Experts />
-      <Services />
+      <ServicesContextProvider>
+        <Services />
+      </ServicesContextProvider>
     </>
   );
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  const services = await client.request(GET_SERVICES);
-  const data = services.items.data;
-
-  console.log(data)
-
-  return {
-    props: {
-      ...services
-    }
-  }
 }

@@ -1,5 +1,8 @@
 // CSS
 import styled from "styled-components";
+// Components
+import { useContext } from "react";
+import { ServicesContext } from "../../../../contexts/ServicesContext";
 
 const Container = styled.div`
   max-width: 1280px;
@@ -49,6 +52,7 @@ const Items = styled.div`
 
   ul {
     padding: 16px;
+    list-style: none;
 
     div {
       display: flex;
@@ -72,7 +76,7 @@ const Description = styled.div`
   display: flex;
   flex-direction: column;
 `;
-//
+
 const ItemImg = styled.img`
   height: 300px;
   border: 1px solid #c59d5f;
@@ -101,22 +105,28 @@ const Infos = styled.div`
 `;
 
 const ContentServices = (props) => {
+  // Context
+  const { name, data } = useContext(ServicesContext);
+
   return (
     <Container>
       <Items>
         <ul>
-          <div>
-            <li>Item 01</li>
-            <span>R$ 50,00</span>
-          </div>
-          <div>
-            <li>Item 01</li>
-            <span>R$ 50,00</span>
-          </div>
+          {data &&
+            data
+              .filter(function (i) {
+                return i.attributes.service === `${props.service}`;
+              })
+              .map((i) => (
+                <div key={i.id}>
+                  <li>{i.attributes.item_name}</li>
+                  <span>{i.attributes.price}</span>
+                </div>
+              ))}
         </ul>
       </Items>
 
-      <Description>
+      {/* <Description>
         <ItemImg />
         <Infos>
           <h3>Item 01</h3>
@@ -129,7 +139,7 @@ const ContentServices = (props) => {
             exercitation ullamco laboris nisi ut aliquip ex ea commodo.
           </p>
         </Infos>
-      </Description>
+      </Description> */}
     </Container>
   );
 };

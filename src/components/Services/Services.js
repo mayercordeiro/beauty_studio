@@ -1,7 +1,9 @@
-import Titles from "../UI/Titles/Titles";
+import { useContext } from "react";
+import { ServicesContext } from "../../contexts/ServicesContext";
 // CSS
 import styled from "styled-components";
 // Components
+import Titles from "../UI/Titles/Titles";
 import ServicesTable from "./ServicesTable/ServicesTable";
 
 const Container = styled.section`
@@ -22,6 +24,9 @@ const Content = styled.div`
 `;
 
 const Services = () => {
+  const { name, data } = useContext(ServicesContext);
+  // console.log("### página de dadodos: ", data);
+
   return (
     <Container>
       <Content>
@@ -31,7 +36,6 @@ const Services = () => {
           color="#505050"
           left="144px"
         />
-
         <ServicesTable />
       </Content>
     </Container>
