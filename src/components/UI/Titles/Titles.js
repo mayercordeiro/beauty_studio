@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Title = styled.div`
-  z-index: 2000;
+  z-index: 2;
 
   h2 {
     font-size: 48px;
@@ -35,7 +35,7 @@ const Title = styled.div`
       background-color: ${(props) => props.color};
       position: absolute;
       top: 45%;
-      left: 0;
+      left: 0px;
     }
 
     &::after {

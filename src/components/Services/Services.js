@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { ServicesContext } from "../../contexts/ServicesContext";
 // CSS
 import styled from "styled-components";
 // Components
@@ -14,18 +12,15 @@ const Container = styled.section`
 const Content = styled.div`
   max-width: 1280px;
   margin: 0 auto;
-  padding-top: 80px;
-
-  padding-bottom: 500px;
+  padding: 80px 0 200px;
 
   display: flex;
   align-items: center;
   flex-direction: column;
 `;
 
-const Services = () => {
-  const { name, data } = useContext(ServicesContext);
-  // console.log("### página de dadodos: ", data);
+const Services = (props) => {
+  const { servicesData } = props;
 
   return (
     <Container>
@@ -36,7 +31,7 @@ const Services = () => {
           color="#505050"
           left="144px"
         />
-        <ServicesTable />
+        <ServicesTable servicesData={servicesData} />
       </Content>
     </Container>
   );

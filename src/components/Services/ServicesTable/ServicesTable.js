@@ -2,7 +2,8 @@ import { useState } from "react";
 // CSS
 import styled from "styled-components";
 // Components
-import CiliosContent from "./Content/CiliosContent";
+import Service from "./Content/Service";
+import Item from "./Content/Item";
 
 const Services = styled.div`
   width: 100%;
@@ -31,7 +32,9 @@ const Content = styled.div`
   width: 100%;
 `;
 
-const ServicesTable = () => {
+const ServicesTable = (props) => {
+  const { servicesData } = props;
+
   const [activeTab, setActiveTab] = useState("cilios");
 
   const handleTabCilios = () => {
@@ -70,11 +73,9 @@ const ServicesTable = () => {
       </Services>
 
       <Content>
-        {activeTab === "cilios" && <CiliosContent service="Cilios" />}
-        {activeTab === "sobrancelhas" && (
-          <CiliosContent service="Sobrancelhas" />
+        {activeTab === "cilios" && (
+          <Service servicesData={servicesData} service="Cilios" />
         )}
-        {activeTab === "maquiagem" && <h1>###</h1>}
       </Content>
     </>
   );
