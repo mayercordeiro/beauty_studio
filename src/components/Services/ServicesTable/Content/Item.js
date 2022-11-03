@@ -11,7 +11,7 @@ const ItemImg = styled.img`
   max-width: 800px;
   height: 300px;
   border: 1px solid #c59d5f;
-  background-image: url(./images/item01.jpg);
+  background-image: ${(props) => props.image};
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -40,7 +40,7 @@ const Infos = styled.div`
 const Item = (props) => {
   return (
     <Description>
-      <ItemImg />
+      <ItemImg image={props.image} />
       <Infos>
         <h3>{props.item_name}</h3>
         <span>{props.price}</span>

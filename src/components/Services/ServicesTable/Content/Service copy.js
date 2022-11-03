@@ -79,6 +79,22 @@ const Service = (props) => {
   const [position, setPosition] = useState(servicesData[0].id);
   console.log(servicesData[0].id);
 
+  const [itemName, setItemName] = useState(
+    servicesData[0].attributes.item_name
+  );
+  // const [itemPrice, setItemPrice] = useState(
+  //   servicesData[position].attributes.price
+  // );
+  // const [itemDescription, setItemDescription] = useState(
+  //   servicesData[position].attributes.description_text
+  // );
+
+  const handlePosition = useEffect(() => {
+    setItemName(servicesData[position].attributes.item_name);
+    // setItemPrice(servicesData[position].attributes.price);
+    // setItemDescription(servicesData[position].attributes.description_text);
+  }, [position]);
+
   const ItemsList = (
     <ul>
       {servicesData &&
@@ -87,7 +103,13 @@ const Service = (props) => {
             return i.attributes.service === `${props.service}`;
           })
           .map((i) => (
-            <a key={i.id}>
+            <a
+              key={i.id}
+              onClick={() => {
+                setPosition(i.id);
+                handlePosition;
+              }}
+            >
               <li>{i.attributes.item_name}</li>
               <span>{i.attributes.price}</span>
             </a>
@@ -100,9 +122,9 @@ const Service = (props) => {
       <Items>{ItemsList}</Items>
 
       <Item
-      // item_name={itemName}
-      // price={itemPrice}
-      // description={itemDescription}
+        item_name={itemName}
+        // price={itemPrice}
+        // description={itemDescription}
       />
     </Container>
   );

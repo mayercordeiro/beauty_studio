@@ -3,7 +3,6 @@ import { useState } from "react";
 import styled from "styled-components";
 // Components
 import Service from "./Content/Service";
-import Item from "./Content/Item";
 
 const Services = styled.div`
   width: 100%;
