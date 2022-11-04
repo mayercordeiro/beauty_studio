@@ -3,7 +3,7 @@ import Head from "next/head";
 import Main from "../components/Main/Main";
 import Inspiration from "../components/Inspiration/Inspiration";
 import Experts from "../components/Experts/Experts";
-import Services from "../components/Services/Services";
+import OurServices from "../components/OurServices/OurServices";
 import Reviews from "../components/Reviews/Reviews";
 // Queries
 import client from "../graphql/client";
@@ -25,7 +25,7 @@ export default function Home(props) {
       <Main />
       <Inspiration />
       <Experts />
-      <Services servicesData={servicesData} />
+      <OurServices servicesData={servicesData} />
       <Reviews />
     </>
   );
