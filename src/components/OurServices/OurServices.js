@@ -11,7 +11,6 @@ import ContentService from "./ContentService";
 const Container = styled.section`
   position: relative;
   background-color: #fff;
-  padding-bottom: 500px;
   z-index: 3;
 `;
 

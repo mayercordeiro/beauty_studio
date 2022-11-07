@@ -11,7 +11,6 @@ import GET_SERVICES from "../graphql/queries/getServices";
 
 export default function Home(props) {
   const { servicesData } = props;
-  // console.log(servicesData);
 
   return (
     <>
@@ -34,14 +33,12 @@ export default function Home(props) {
 async function getData() {
   const res = await client.request(GET_SERVICES);
   const services = res.items.data;
-  // console.log("getData: ", services);
 
   return services;
 }
 
 export async function getStaticProps(context) {
   const servicesData = await getData();
-  // console.log("getStaticProps: ", servicesData);
 
   return {
     props: {

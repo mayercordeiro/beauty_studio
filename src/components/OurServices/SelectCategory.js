@@ -6,6 +6,7 @@ const Services = styled.div`
   width: 100%;
   height: 100px;
   color: #fff;
+  margin-top: 40px;
 
   display: flex;
   align-items: center;

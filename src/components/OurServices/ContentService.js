@@ -1,14 +1,19 @@
 // CSS
 import styled from "styled-components";
+// Componente
+import PrimaryButton from "../UI/PrimaryButton/PrimaryButton";
 
 const Description = styled.div`
-  max-width: 800px;
+  width: 800px;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 1024px) {
+    margin-left: 80px;
+  }
 `;
 
 const ItemImg = styled.img`
-  width: 800px;
   height: 300px;
   border: 1px solid #c59d5f;
   background-image: ${(props) => `url(${props.image})`};
@@ -19,8 +24,6 @@ const ItemImg = styled.img`
 `;
 
 const Infos = styled.div`
-  max-width: 800px;
-
   h3 {
     font-size: 24px;
     margin-top: 16px;
@@ -46,6 +49,16 @@ const ContentService = (props) => {
         <span>{props.price}</span>
         <p>{props.description}</p>
       </Infos>
+      <PrimaryButton
+        text="Agendar"
+        color="#FFF"
+        colorHover="#3F3F3F"
+        border="1px solid #3F3F3F"
+        bkg="#3F3F3F"
+        bkgHover="transparent"
+        href="/"
+        bkgAnimation="#FFF"
+      />
     </Description>
   );
 };
