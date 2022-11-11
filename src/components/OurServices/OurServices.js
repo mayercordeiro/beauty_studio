@@ -12,6 +12,25 @@ const Container = styled.section`
   position: relative;
   background-color: #fff;
   z-index: 3;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/bkg-watercolor-01.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    z-index: -1;
+  }
+`;
+
+const ContainerTitle = styled.section`
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 16px 0 16px;
 `;
 
 const Content = styled.section`
@@ -19,7 +38,8 @@ const Content = styled.section`
 
   max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 16px 200px 16px;
+  padding: 0px 16px 200px 16px;
+  z-index: 2;
 
   display: flex;
   flex-direction: column;
@@ -32,6 +52,10 @@ const Table = styled.div`
   gap: 80px;
   width: 100%;
   margin-top: 40px;
+
+  @media screen and (max-width: 530px) {
+    margin-top: 8px;
+  }
 `;
 
 const OurServices = (props) => {
@@ -70,13 +94,15 @@ const OurServices = (props) => {
 
   return (
     <Container>
-      <Content>
+      <ContainerTitle>
         <Titles
-          h2="Nossos Serviços"
-          h3="EXPERIÊNCIA"
+          h2="Agende Seu Horário"
+          h3="TRANSFORMAÇÃO"
           color="#505050"
-          left="146px"
+          left="186px"
         />
+      </ContainerTitle>
+      <Content>
         <SelectCategory handleCategory={updateCategory} />
         <Table>
           <SelectService>

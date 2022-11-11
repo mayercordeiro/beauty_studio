@@ -12,12 +12,13 @@ const InstagramBtn = styled.div`
     display: inline-block;
     height: 48px;
     padding: 10px 25px;
-    border: 1px solid #000;
+    border: 1px solid #c59d5f;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 1;
     font-size: 18px;
+    color: #fff;
 
     &:hover {
       color: #fff;
@@ -31,7 +32,7 @@ const InstagramBtn = styled.div`
       top: 0;
       right: 0;
       z-index: -1;
-      background: #505050;
+      background: #c59d5f;
       transition: all 0.3s ease;
     }
 

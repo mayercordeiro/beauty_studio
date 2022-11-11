@@ -5,6 +5,8 @@ import Inspiration from "../components/Inspiration/Inspiration";
 import Experts from "../components/Experts/Experts";
 import OurServices from "../components/OurServices/OurServices";
 import Reviews from "../components/Reviews/Reviews";
+import Newsletter from "../components/Newsletter/Newsletter";
+import Footer from "../components/Footer/Footer";
 // Queries
 import client from "../graphql/client";
 import GET_SERVICES from "../graphql/queries/getServices";
@@ -22,10 +24,12 @@ export default function Home(props) {
         ></meta>
       </Head>
       <Main />
-      <Inspiration />
       <Experts />
+      <Inspiration />
       <OurServices servicesData={servicesData} />
       <Reviews />
+      {/*<Newsletter /> */}
+      <Footer />
     </>
   );
 }

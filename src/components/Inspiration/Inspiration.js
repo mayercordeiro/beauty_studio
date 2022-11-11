@@ -10,15 +10,17 @@ const Inspiration = () => {
     <section className={styles.inspiration}>
       <div className={styles.inspiration_container}>
         <Titles
-          h2="Últimas Tendências"
-          h3="INSPIRAÇÃO"
-          color="#505050"
-          left="138px"
+          h2="Nossos Serviços"
+          h3="EXPERIÊNCIA"
+          color="#fff"
+          left="144px"
         />
 
         <div className={styles.destaques}>
           <div className={styles.destaques_container}>
             <CardInspiration
+              h1Color="#FFF"
+              pColor="#FFF"
               url="./images/inspiration01.jpg"
               titulo="Extensão"
               subtitulo="Cílios"
@@ -30,10 +32,10 @@ const Inspiration = () => {
             />
 
             <CardInspiration
-              bkg="#3F3F3F"
-              shadow="0 0 0px 16px #3F3F3F"
-              h1Color="#FFF"
-              pColor="#FFF"
+              bkg="#fff"
+              shadow="0 0 0px 16px #fff"
+              h1Color="#505050"
+              pColor="#505050"
               url="./images/inspiration01.jpg"
               titulo="Lash Lift"
               subtitulo="Cílios"
@@ -46,6 +48,8 @@ const Inspiration = () => {
             />
 
             <CardInspiration
+              h1Color="#FFF"
+              pColor="#FFF"
               url="./images/inspiration01.jpg"
               titulo="Brow Lamination"
               subtitulo="Sobrancelhas"

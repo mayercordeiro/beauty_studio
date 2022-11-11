@@ -30,7 +30,7 @@ const Header = () => {
             <a>
               <img
                 src="/images/logo.png"
-                alt="Logo Pâmela Ramos Beauty Studio"
+                alt="Logo do studio escrito Pâmela Ramos e acima uma flor de lotus na cor dourada"
               />
             </a>
           </Link>
@@ -49,13 +49,8 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/servicos">
                 <a>SERVIÇOS</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>GALERIA DE FOTOS</a>
               </Link>
             </li>
             <li>
@@ -131,13 +126,8 @@ const Header = () => {
               </Link>
             </li>
             <li onClick={handleMobile}>
-              <Link href="/">
+              <Link href="/servicos">
                 <a>SERVIÇOS</a>
-              </Link>
-            </li>
-            <li onClick={handleMobile}>
-              <Link href="/">
-                <a>GALERIA DE FOTOS</a>
               </Link>
             </li>
             <li onClick={handleMobile}>

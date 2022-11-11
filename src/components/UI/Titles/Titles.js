@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const Title = styled.div`
   z-index: 2;
-
   h2 {
     font-size: 48px;
     margin-top: -4px;
@@ -17,17 +16,14 @@ const Title = styled.div`
       margin-top: 10px;
     }
   }
-
   h3 {
     position: relative;
     font-size: 16px;
     padding-left: 32px;
     color: ${(props) => props.color};
-
     @include responsiveMax(648px) {
       font-size: 14px;
     }
-
     &::before {
       content: "";
       width: 25px;
@@ -37,7 +33,6 @@ const Title = styled.div`
       top: 45%;
       left: 0px;
     }
-
     &::after {
       content: "";
       width: 25px;
@@ -46,7 +41,6 @@ const Title = styled.div`
       position: absolute;
       top: 45%;
       left: ${(props) => props.left};
-
       @include responsiveMax(648px) {
         left: 124px;
       }

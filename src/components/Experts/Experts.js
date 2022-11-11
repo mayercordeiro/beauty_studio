@@ -9,9 +9,9 @@ const Experts = () => {
     <section className={styles.experts}>
       <div className={styles.experts_container}>
         <Titles
-          h2="Nossos Experts"
+          h2="Quem Somos"
           h3="PROFISSIONALISMO"
-          color="#FFF"
+          color="#505050"
           left="200px"
         />
 
@@ -32,14 +32,14 @@ const Experts = () => {
               ultrices tincidunt turpis.
             </p>
             <PrimaryButton
-              text="Quem Somos"
-              color="#505050"
-              colorHover="#FFF"
-              border="1px solid #FFF"
-              bkg="#FFF"
+              text="Saiba Mais"
+              color="#FFF"
+              colorHover="#3F3F3F"
+              border="1px solid #3F3F3F"
+              bkg="#3F3F3F"
               bkgHover="transparent"
-              href="/quem-somos"
-              bkgAnimation="#505050"
+              href="/"
+              bkgAnimation="#FFF"
             />
           </div>
           <div className={styles.img_expert}>

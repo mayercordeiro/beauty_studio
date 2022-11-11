@@ -3,7 +3,7 @@
 
 .experts {
     width: 100%;
-    background-color: #3F3F3F;
+    background: linear-gradient(180deg, rgb(249, 246, 244) 0%, rgb(255, 255, 255) 16%);;
 
     .experts_container{
         max-width: 1280px;
@@ -47,7 +47,7 @@
 
                 p {
                     font-size: 18px;
-                    color: #FFF;
+                    color: $primary;
                 }
             }
 

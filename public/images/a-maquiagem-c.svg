@@ -22,7 +22,7 @@
             }
 
             #Layer_1{
-                animation: move1 3.5s ease alternate infinite;
+                animation: move1 3.5s cubic-bezier(0.37, 0, 0.63, 1) alternate infinite;
             }
 
             @keyframes move1 {

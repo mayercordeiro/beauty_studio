@@ -9,6 +9,8 @@ const Services = styled.div`
   margin-top: 40px;
 
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   align-items: center;
   justify-content: space-evenly;
 
@@ -16,6 +18,10 @@ const Services = styled.div`
     font-size: 24px;
     color: #505050;
     cursor: pointer;
+
+    @media screen and (max-width: 530px) {
+      font-size: 16px;
+    }
   }
 
   .active {
@@ -36,9 +42,9 @@ const SelectCategory = (props) => {
     setActiveTab("Sobrancelhas");
   };
 
-  // const handleTabMaquiagem = () => {
-  //   setActiveTab("Maquiagem");
-  // };
+  const handleTabMaquiagem = () => {
+    setActiveTab("Maquiagem");
+  };
 
   useEffect(() => {
     props.handleCategory(activeTab);
@@ -58,12 +64,12 @@ const SelectCategory = (props) => {
       >
         SOBRANCELHAS
       </span>
-      {/* <span
+      <span
         className={activeTab === "Maquiagem" ? "active" : ""}
         onClick={handleTabMaquiagem}
       >
         MAQUIAGEM
-      </span> */}
+      </span>
     </Services>
   );
 };

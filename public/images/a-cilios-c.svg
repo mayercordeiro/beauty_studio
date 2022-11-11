@@ -12,11 +12,11 @@
                 fill:#191919;
             }
             #Layer_Circulo{
-                animation: move1 3s ease alternate infinite;
+                animation: move1 3s cubic-bezier(0.37, 0, 0.63, 1) alternate infinite;
             }
 
             #Layer_Cilios {
-                animation: move1 3s ease alternate infinite;
+                animation: move1 3s cubic-bezier(0.37, 0, 0.63, 1) alternate infinite;
             }
 
             @keyframes move1 {

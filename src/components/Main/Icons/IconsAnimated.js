@@ -3,9 +3,9 @@ import styled from "styled-components";
 // Hooks
 import useScrollPosition from "../../Hooks/useScrollPosition";
 // Components
-import Icons from "./Icons";
 import Cilios from "./Cilios";
 import Maquiagem from "./Maquiagem";
+import Sobrancelha from "./Sobrancelha";
 
 const IconsContainer = styled.div`
   position: absolute;
@@ -38,13 +38,28 @@ const Texts = styled.div`
     text-align: center;
   }
 
-  animation: textsOnScroll 1.5s ease-in forwards;
-  animation-delay: 1s;
+  animation: ${(props) => props.animation};
+  /* animation-delay: 1s; */
   animation-play-state: ${(props) => props.playTexts};
 
   @keyframes textsOnScroll {
     to {
       opacity: 1;
+    }
+  }
+
+  @keyframes textsAni {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes textsAni_ {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
     }
   }
 `;
@@ -58,28 +73,15 @@ const IconsAnimated = () => {
     <IconsContainer>
       <Cilios />
       <Maquiagem />
+      <Sobrancelha />
 
-      {/* <Icons
-        src="./images/a-cilios-c.svg"
-        top={"20px"}
-        animation={"ciliosOnScroll, cilios"}
-        play={`${scrollOn ? "" : "paused"}, running`}
-      />
-      <Icons
-        src="./images/a-sobrancelha-c.svg"
-        top={"420px"}
-        left={"90px"}
-        animation={"sobrancelhasOnScroll"}
-        play={scrollOn ? "play" : "paused"}
-      />
-      <Icons
-        src="./images/a-maquiagem-c.svg"
-        top={"-10px"}
-        right={"-50px"}
-        animation={"maquiagemOnScroll"}
-        play={scrollOn ? "play" : "paused"}
-      /> */}
-      <Texts playTexts={scrollOn ? "play" : "paused"}>
+      <Texts
+        animation={`${
+          scrollOn
+            ? "textsAni 1.5s ease-in forwards"
+            : "textsAni_ 1.5s ease-in forwards"
+        }`}
+      >
         <p>Cílios</p>
         <p>Sobrancelhas</p>
         <p>Maquiagem</p>
