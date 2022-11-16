@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 // CSS
 import styled from "styled-components";
@@ -23,14 +24,11 @@ const Content = styled.div`
     max-width: 350px;
     display: flex;
     flex-direction: column;
-
-    img {
-      width: 70%;
-    }
+    align-items: flex-start;
 
     p {
       color: #fff;
-      font-size: 18px;
+      font-size: 16px;
       margin-top: 16px;
     }
   }
@@ -39,14 +37,14 @@ const Content = styled.div`
     max-width: 300px;
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 38px;
 
     @media screen and (max-width: 610px) {
       margin-top: 0px;
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 24px;
       color: #c59d5f;
     }
 
@@ -54,11 +52,11 @@ const Content = styled.div`
       list-style: none;
 
       li a {
-        font-size: 18px;
+        font-size: 16px;
         color: #fff;
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 12px;
         height: 40px;
 
         &:before {
@@ -76,14 +74,14 @@ const Content = styled.div`
   .hour {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 38px;
 
     @media screen and (max-width: 610px) {
       margin-top: 0px;
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 24px;
       color: #c59d5f;
     }
 
@@ -91,11 +89,11 @@ const Content = styled.div`
       list-style: none;
 
       li {
-        font-size: 18px;
+        font-size: 16px;
         color: #fff;
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 12px;
         height: 40px;
 
         @media screen and (max-width: 500px) {
@@ -107,12 +105,14 @@ const Content = styled.div`
     .clock {
       &:before {
         content: url(./images/clock.svg);
+        height: 23px;
       }
     }
 
     .place {
       &:before {
         content: url(./images/place.svg);
+        height: 23px;
       }
     }
   }
@@ -138,9 +138,11 @@ const Footer = () => {
     <Container>
       <Content>
         <div className="intro">
-          <img
-            src="./images/logo-pamela-invert.png"
-            alt="Logo do studio escrito Pâmela Ramos e acima uma flor de lotus na cor dourada"
+          <Image
+            src="/images/coroa-footer.svg"
+            alt="Logo do studio, uma flor de lotus na cor dourada"
+            width={92}
+            height={70}
           />
           <p>
             Excepteur sint occaecat cupidatat non proident, sunt in culpa
@@ -161,12 +163,12 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/cursos">
                 <a>Cursos</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/contato">
                 <a>Contato</a>
               </Link>
             </li>
@@ -177,7 +179,7 @@ const Footer = () => {
           <h2>Atendimento</h2>
           <ul>
             <li className="place">
-              Rua São Paulo, 1647 | Francisco Beltrão / PR
+              Rua São Paulo, 1647 - Francisco Beltrão / Paraná
             </li>
             <li className="clock">Seg-Sex: 8h - 22h</li>
             <li className="clock">Sábado: 8h - 17h</li>
