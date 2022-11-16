@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Title = styled.div`
   z-index: 2;
+
   h2 {
     font-size: 48px;
     margin-top: -4px;
@@ -16,14 +17,13 @@ const Title = styled.div`
       margin-top: 10px;
     }
   }
-  h3 {
+
+  span {
     position: relative;
     font-size: 16px;
     padding-left: 32px;
     color: ${(props) => props.color};
-    @include responsiveMax(648px) {
-      font-size: 14px;
-    }
+
     &::before {
       content: "";
       width: 25px;
@@ -31,8 +31,9 @@ const Title = styled.div`
       background-color: ${(props) => props.color};
       position: absolute;
       top: 45%;
-      left: 0px;
+      left: 1px;
     }
+
     &::after {
       content: "";
       width: 25px;
@@ -41,9 +42,6 @@ const Title = styled.div`
       position: absolute;
       top: 45%;
       left: ${(props) => props.left};
-      @include responsiveMax(648px) {
-        left: 124px;
-      }
     }
   }
 `;
@@ -51,7 +49,7 @@ const Title = styled.div`
 const Titles = (props) => {
   return (
     <Title color={props.color} left={props.left}>
-      <h3>{props.h3}</h3>
+      <span>{props.h3}</span>
       <h2>{props.h2}</h2>
     </Title>
   );
