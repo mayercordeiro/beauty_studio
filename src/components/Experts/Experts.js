@@ -1,3 +1,4 @@
+import Image from "next/image";
 // CSS
 import styles from "./_Experts.module.scss";
 // Components
@@ -18,7 +19,12 @@ const Experts = () => {
         <div className={styles.expertN1}>
           <div className={styles.description}>
             <div className={styles.img_mobile}>
-              <img src="./images/expertn1-mobile.jpg" alt="Pâmela Ramos" />
+              <Image
+                src="/images/expertn1-mobile.jpg"
+                alt="Pâmela Ramos"
+                width={150}
+                height={149.09}
+              />
             </div>
             <h4>Pâmela Ramos</h4>
             <p>
@@ -43,7 +49,12 @@ const Experts = () => {
             />
           </div>
           <div className={styles.img_expert}>
-            <img src="./images/expertn1.png" alt="Pâmela Ramos" />
+            <Image
+              src="/images/expertn1.png"
+              alt="Pâmela Ramos"
+              width={501}
+              height={498}
+            />
           </div>
         </div>
       </div>

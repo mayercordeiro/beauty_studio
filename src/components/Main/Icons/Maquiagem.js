@@ -1,3 +1,4 @@
+import Image from "next/image";
 // Hooks
 import useScrollPosition from "../../Hooks/useScrollPosition";
 // CSS
@@ -52,7 +53,12 @@ const Maquiagem = (props) => {
           : "maquiagemAni_ 1s ease-in-out"
       }`}
     >
-      <img src="./images/a-maquiagem-c.svg" alt="cilios" />
+      <Image
+        src="/images/a-maquiagem-c.svg"
+        alt="Maquiagem"
+        width={120}
+        height={180}
+      />
     </DivMaquiagem>
   );
 };

@@ -85,21 +85,6 @@
     }
 }
 
-.main_image_pinca {
-    position: fixed;
-    top: 4px;
-    left: -40px;
-    transition: 0.5s ease;
-
-    > img {
-        max-width: 400px;
-    }
-}
-
-.pinca_off {
-    opacity: 0;
-}
-
 .scrollImg {
     display: flex;
     justify-content: center;
@@ -138,10 +123,6 @@
 }
 
 @include responsiveMax(480px) {
-    .main_image_pinca {
-        display: none;
-    }
-
     .main_left {
         h2 {
             font-size: 2.5rem;

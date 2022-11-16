@@ -1,3 +1,4 @@
+import Image from "next/image";
 // Hooks
 import useScrollPosition from "../../Hooks/useScrollPosition";
 // CSS
@@ -52,7 +53,12 @@ const Sobrancelha = (props) => {
           : "sobrancelhaAni_ 1s ease-in-out"
       }`}
     >
-      <img src="./images/a-sobrancelha-c.svg" alt="cilios" />
+      <Image
+        src="/images/a-sobrancelha-c.svg"
+        alt="Sobrancelha"
+        width={120}
+        height={180}
+      />
     </DivSobrancelha>
   );
 };

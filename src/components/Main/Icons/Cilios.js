@@ -1,3 +1,4 @@
+import Image from "next/image";
 // Hooks
 import useScrollPosition from "../../Hooks/useScrollPosition";
 // CSS
@@ -51,7 +52,12 @@ const Cilios = (props) => {
           : "ciliosAni_ 1s ease-in-out"
       }`}
     >
-      <img src="./images/a-cilios-c.svg" alt="cilios" />
+      <Image
+        src="/images/a-cilios-c.svg"
+        alt="Cílios"
+        width={120}
+        height={180}
+      />
     </DivCilios>
   );
 };
