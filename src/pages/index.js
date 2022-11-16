@@ -28,7 +28,7 @@ export default function Home(props) {
       <Inspiration />
       <OurServices servicesData={servicesData} />
       <Reviews />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </>
   );
 }
