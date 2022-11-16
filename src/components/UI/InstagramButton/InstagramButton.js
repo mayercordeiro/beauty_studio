@@ -10,7 +10,7 @@ const InstagramBtn = styled.div`
   a {
     position: relative;
     display: inline-block;
-    height: 48px;
+    min-height: 48px;
     padding: 10px 25px;
     border: 1px solid #c59d5f;
     background: transparent;

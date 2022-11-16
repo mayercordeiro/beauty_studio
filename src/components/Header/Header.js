@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 // CSS
@@ -73,15 +74,22 @@ const Header = () => {
           <div className={styles.social}>
             <Link href="https://www.instagram.com/pamela.raamos/">
               <a target="_blank">
-                <img
+                <Image
                   src="/images/icon-ig.svg"
                   alt="Conheça o nosso instagram"
+                  width={20}
+                  height={20}
                 />
               </a>
             </Link>
             <Link href="https://www.instagram.com/pamela.raamos/">
               <a target="_blank">
-                <img src="/images/icon-fb.svg" alt="Conheça o nosso facebook" />
+                <Image
+                  src="/images/icon-fb.svg"
+                  alt="Conheça o nosso facebook"
+                  width={10}
+                  height={20}
+                />
               </a>
             </Link>
           </div>
@@ -151,12 +159,22 @@ const Header = () => {
         <div className={styles.socialMobile}>
           <Link href="https://www.instagram.com/pamela.raamos/">
             <a target="_blank">
-              <img src="/images/icon-ig.svg" alt="Conheça o nosso instagram" />
+              <Image
+                src="/images/icon-ig.svg"
+                alt="Conheça o nosso instagram"
+                width={20}
+                height={20}
+              />
             </a>
           </Link>
           <Link href="/">
             <a target="_blank">
-              <img src="/images/icon-fb.svg" alt="Conheça o nosso facebook" />
+              <Image
+                src="/images/icon-fb.svg"
+                alt="Conheça o nosso facebook"
+                width={10}
+                height={20}
+              />
             </a>
           </Link>
         </div>

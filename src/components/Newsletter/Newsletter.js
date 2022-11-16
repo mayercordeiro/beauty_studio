@@ -1,8 +1,13 @@
+import { useState } from "react";
+import axios from "axios";
+// CSS
 import styled from "styled-components";
 
 const Container = styled.section`
-  height: 100px;
+  min-height: 100px;
   background-color: #fdf7f5;
+  display: flex;
+  align-items: center;
 `;
 
 const Content = styled.div`
@@ -14,14 +19,30 @@ const Content = styled.div`
   display: flex;
   align-items: center;
 
+  @media screen and (max-width: 1020px) {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+
   h2 {
     max-width: 540px;
-    font-size: 22px;
+    font-size: 18px;
+
+    @media screen and (max-width: 1020px) {
+      text-align: center;
+      margin-top: 16px;
+    }
   }
 
   > div {
     margin-left: 80px;
     display: flex;
+
+    @media screen and (max-width: 1020px) {
+      margin-bottom: 16px;
+      margin-left: 0px;
+    }
 
     input[type="email"] {
       width: 450px;
@@ -42,6 +63,11 @@ const Content = styled.div`
       &:focus {
         outline: none;
       }
+
+      @media screen and (max-width: 590px) {
+        width: unset;
+        max-width: 340px;
+      }
     }
 
     input[type="image"] {
@@ -58,6 +84,25 @@ const Content = styled.div`
 `;
 
 const Newsletter = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    axios
+      .post(
+        "https://prbscms.herokuapp.com/api/newsletters",
+        JSON.stringify({
+          data: {
+            email: email,
+          },
+        })
+      )
+      .then((response) => {
+        console.log(response);
+      });
+  };
+
   return (
     <Container>
       <Content>
@@ -66,14 +111,14 @@ const Newsletter = () => {
           ofertas:
         </h2>
         <div>
-          <input type="email" placeholder="Digite seu email" />
-          <input
-            type="image"
-            name="submit"
-            src="./images/paper-plane.svg"
-            border="0"
-            alt="Submit"
-          />
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="Digite seu email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input type="submit" value="Enviar" />
+          </form>
         </div>
       </Content>
     </Container>

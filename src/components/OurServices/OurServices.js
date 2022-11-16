@@ -119,6 +119,8 @@ const OurServices = (props) => {
                     click={() => {
                       setPosition(index);
                     }}
+                    activeStyle={position == index ? "#c59d5f" : ""}
+                    fontWeight={position == index ? "700" : "400"}
                   />
                 ))}
           </SelectService>

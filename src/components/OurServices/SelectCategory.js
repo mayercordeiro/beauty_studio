@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 // CSS
 import styled from "styled-components";
-//
+
 const Services = styled.div`
   width: 100%;
   height: 100px;
@@ -15,9 +15,31 @@ const Services = styled.div`
   justify-content: space-evenly;
 
   span {
+    position: relative;
     font-size: 24px;
     color: #505050;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: #c59d5f;
+    }
+
+    &::after {
+      content: "";
+      background: #c59d5f;
+      display: block;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
 
     @media screen and (max-width: 530px) {
       font-size: 16px;

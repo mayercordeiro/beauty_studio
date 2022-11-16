@@ -48,6 +48,14 @@ const Items = styled.div`
     padding: 16px;
     list-style: none;
     position: relative;
+
+    li a {
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: #c59d5f;
+      }
+    }
   }
 
   > span {
@@ -66,7 +74,7 @@ const Items = styled.div`
   }
 
   > span:last-child {
-    content: "X";
+    content: "";
     position: absolute;
     display: block;
     text-align: center;
@@ -77,6 +85,7 @@ const Items = styled.div`
     font-family: monospace;
     z-index: 2000;
     color: #ff8484;
+    font-family: Verdana, Tahoma, sans-serif;
 
     @media screen and (min-width: 1301px) {
       display: none;

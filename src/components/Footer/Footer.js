@@ -25,7 +25,7 @@ const Content = styled.div`
     flex-direction: column;
 
     img {
-      width: 100%;
+      width: 70%;
     }
 
     p {
@@ -156,7 +156,7 @@ const Footer = () => {
           <h2>Links Úteis</h2>
           <ul>
             <li>
-              <Link href="/">
+              <Link href="/servicos">
                 <a>Serviços</a>
               </Link>
             </li>

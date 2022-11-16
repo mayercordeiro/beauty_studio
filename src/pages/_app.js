@@ -2,6 +2,7 @@
 import "../styles/global.scss";
 // Components
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 // Hooks
 import useScrollPosition from "../components/Hooks/useScrollPosition";
 
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
         <Header />
       </header>
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

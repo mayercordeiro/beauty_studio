@@ -16,8 +16,10 @@ const BoxReview = styled.div`
     margin-right: 0px;
   }
 
-  &:hover {
-    transform: scale(105%);
+  @media screen and (min-width: 1024px) {
+    &:hover {
+      transform: scale(105%);
+    }
   }
 `;
 
